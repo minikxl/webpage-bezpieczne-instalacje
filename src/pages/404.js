@@ -1,14 +1,22 @@
 import React from "react"
+import styled from "styled-components"
+import Header from "../components/atoms/Header"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = () => (
-  <Layout>
+const StyledWrapper = styled.div`
+  width: 100%;
+  height: calc(100vh - 30px);
+  padding: 150px 10%;
+`
+
+const NotFound = () => (
+  <StyledWrapper>
     <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+    <Header text="Nie znalezono strony." />
+    <br/>
+    <p>Błąd 404: Podana strona nie istnieje. <span aria-label=":(" role="img">🙁</span></p>
+  </StyledWrapper>
 )
 
-export default NotFoundPage
+export default NotFound
